@@ -1,7 +1,6 @@
 public class Question2 {
     public static void main(String[] args) {
         System.out.println("1000以内的完数包括：");
-        System.out.println(1);
         for (int i = 2; i <= 1000; i++) {
             int x = (int)Math.sqrt(i); // 平方根
             int count = 1;
