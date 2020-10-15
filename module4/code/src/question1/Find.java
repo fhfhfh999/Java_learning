@@ -6,10 +6,11 @@ public class Find extends Function{
     int id;
 
     @Override
-    void init() {
+    boolean init() {
         Scanner input = new Scanner(System.in);
         System.out.println("请输入学生学号： ");
         this.id = input.nextInt();
+        return true;
     }
 
     @Override

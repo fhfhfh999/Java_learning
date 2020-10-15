@@ -8,7 +8,7 @@ public abstract class Function {
     static List<Student> Students = new ArrayList<>();
     Student student;
 
-    void init() {
+    boolean init() {
         Scanner input = new Scanner(System.in);
         System.out.println("请输入学生学号： ");
         int id = input.nextInt();
@@ -18,8 +18,10 @@ public abstract class Function {
         int age = input.nextInt();
         try {
             this.student = new Student(id, name, age);
+            return true;
         } catch (StudentsAgeException | StudentsIdException e) {
             e.printStackTrace();
+            return false;
         }
     }
 

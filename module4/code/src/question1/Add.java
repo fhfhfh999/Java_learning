@@ -4,7 +4,8 @@ public class Add extends Function {
 
     @Override
     public void work() {
-        init();
-        Students.add(student);
+        if (true == init()) {
+            Students.add(student);
+        }
     }
 }
